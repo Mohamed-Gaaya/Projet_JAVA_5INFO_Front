@@ -5,7 +5,7 @@ pipeline {
         rname = "projet_java_5info_back"
         rurl = 'goku47'
         imagename = "projet_java_5info_back"
-        dockerhubCredentials = 'dockerhub-credentials-id'  // Replace with your Docker Hub credentials ID
+        dockerhubCredentials = 'e95fc091-e281-4436-92db-c7c5e8f30f5c'  // Replace with your Docker Hub credentials ID
     }
 
     stages {
