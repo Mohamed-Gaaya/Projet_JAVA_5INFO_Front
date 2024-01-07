@@ -16,6 +16,13 @@ pipeline {
                 }
             }
         }
+             stage('app') {
+            steps {
+                script {
+                    sh 'npm run dev'
+                }
+            }
+        }
 
         stage('test') {
             steps {
