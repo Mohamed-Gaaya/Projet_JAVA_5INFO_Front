@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        rname = "projet_java_5info_back"
+        rname = "projet_java_5info_front"
         rurl = 'goku47'
-        imagename = "projet_java_5info_back"
+        imagename = "projet_java_5info_front"
         dockerhubCredentials = 'e95fc091-e281-4436-92db-c7c5e8f30f5c'  // Replace with your Docker Hub credentials ID
     }
 
