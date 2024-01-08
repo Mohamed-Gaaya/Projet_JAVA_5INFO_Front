@@ -41,5 +41,17 @@ pipeline {
                 }
             }
         }
+      stage('cleanup') {
+            steps {
+                script {
+                    def imageName = "${rurl}/${imagename}:latest"
+                    
+                 
+                    
+                    sh "docker image rmi ${imageName}"
+                      sh "docker logout"
+                }
+            }
+        }
     }
 }
