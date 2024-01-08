@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  strategy:
+    type: RollingUpdate
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - image: goku47/projet_java_5info_back:latest
+          name: backend
+          ports:
+            - containerPort: 8081
+              name: http
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://service-database:3306/test?createDatabaseIfNotExist=true
