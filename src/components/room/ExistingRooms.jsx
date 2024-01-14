@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import  { useEffect, useState } from "react"
 import { deleteRoom, getAllRooms } from "../utils/ApiFunctions"
 import { Col, Row } from "react-bootstrap"
 import RoomFilter from "../common/RoomFilter"
@@ -12,7 +12,7 @@ const ExistingRooms = () => {
 	const [roomsPerPage] = useState(8)
 	const [isLoading, setIsLoading] = useState(false)
 	const [filteredRooms, setFilteredRooms] = useState([{ id: "", roomType: "", roomPrice: "" }])
-	const [selectedRoomType, setSelectedRoomType] = useState("")
+	const [selectedRoomType] = useState("")
 	const [errorMessage, setErrorMessage] = useState("")
 	const [successMessage, setSuccessMessage] = useState("")
 
@@ -96,10 +96,24 @@ const ExistingRooms = () => {
 							</Col>
 
 							<Col md={6} className="d-flex justify-content-end">
-								<Link to={"/add-room"}>
-									<FaPlus /> Add Room
-								</Link>
+							<Link to={"/add-room"} style={{ textDecoration: 'none' }}>
+								<button 
+								style={{ 
+									backgroundColor: '#3498db', 
+									color: '#fff', 
+									padding: '10px 20px', 
+									borderRadius: '5px', 
+									border: 'none', 
+									cursor: 'pointer', 
+									display: 'flex', 
+									alignItems: 'center' 
+								}}
+								>
+								<FaPlus style={{ marginRight: '5px' }} /> Add Room
+								</button>
+							</Link>
 							</Col>
+
 						</Row>
 
 						<table className="table table-bordered table-hover">

@@ -12,6 +12,11 @@ const Admin = () => {
                         <span>Manage Rooms</span>
                     </div>
                 </Link>
+                <Link to="http://localhost:8080/usersa" className="option-link">
+                    <div className="option">
+                        <span>Manage Users</span>
+                    </div>
+                </Link>
                 <Link to={"/existing-bookings"} className="option-link">
                     <div className="option">
                         <span>Manage Bookings</span>

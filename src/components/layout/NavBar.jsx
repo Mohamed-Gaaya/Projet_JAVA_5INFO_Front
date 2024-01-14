@@ -14,7 +14,7 @@ const NavBar = () => {
 	const userRole = localStorage.getItem("userRole")
 
 	return (
-		<nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow mt-5 sticky-top">
+		<nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow mt-6 sticky-top">
 			<div className="container-fluid">
 				<Link to={"/"} className="navbar-brand">
 				<img src="/soviva_logo.png" alt="Logo" className="logo-img mr-3" style={{ maxWidth: '150px' }} />
